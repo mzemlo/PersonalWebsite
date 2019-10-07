@@ -1,0 +1,90 @@
+@import "../../Variables.scss";
+.Contact{
+	h1{
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+}
+.contact__form .validate:focus{
+    outline: none;
+    box-shadow: none;
+}
+.contact__form .validate:focus:required:valid {
+    border: 1px solid #169016;
+}
+
+.contact__form .validate:required:invalid {
+    border: 1px solid #a71220;
+    background-color: lighten(#a71220, 60%);
+}
+.contact__form .validate:required:invalid + span { 
+	display: block;
+}
+
+.contact__form .validate:required:valid + span { 
+	display: none;
+}
+
+.contact__form span { 
+	display: none;
+	color: #a71220;
+	font-size: 0.8em;
+}
+
+.contact__form label{
+	width: 100%;
+	text-align: left;
+	margin-bottom: 0;
+	color: darken($secondary-text, 10%);
+	font-size: 0.9em;
+	padding-top: 3px;
+}
+
+.contact__form input, .contact__form textarea{
+	border: 1px solid lighten($secondary-text, 10%);
+	font-family: $main-font;
+	color: $primary-text;
+}
+
+.contact__form input:focus, .contact__form textarea:focus{
+	outline: none;
+}
+
+#firstnameLabel, #lastnameLabel{
+	width: calc(50% - 5px);
+	display: block;
+}
+
+#firstnameLabel{
+	margin-right: 10px;
+}
+
+.contact__form .validate:focus + tooltip {
+    display: block;
+}
+.contact__form__submit {
+    margin-top: 15px;
+    padding: 5px 25px;
+    font-size: 1.1em;
+    background-color: lighten(rgba(0, 140, 138, 1), 15%);
+    transition: all .6s;
+    outline: none;
+    border: none;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+.contact__form__submit:hover{
+	background-color: lighten(rgba(0, 140, 138, 1), 10%);
+	transition: all .6s;
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+}
+@media screen and (max-width: 767px) {
+	.Contact {
+	    padding-right: 45px;
+	    padding-left: 45px;
+	}	
+}

@@ -1,0 +1,186 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "./Variables.scss";
+
+
+.container-fluid {
+  overflow-x: hidden;
+}
+label{
+  font-family: $main-font;
+  letter-spacing: 2px;
+  font-weight: 300;  
+}
+
+.footer{
+  font-family: $main-font;
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+h1 {
+  font-size: 58px;
+  font-family: $main-font;
+  color: $primary-text;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: left;
+  white-space: pre;
+}
+
+p {
+  font-family: 'Ropa Sans', sans-serif;
+  text-align: left;
+}
+
+.navbar-light{
+  background: rgba(255,255,255,1);
+  background: -moz-linear-gradient(left, rgba(255,255,255,1) 26%, rgba(255,255,255,0.83) 34%, rgba(255,255,255,0.79) 36%, rgba(255,255,255,0.62) 43%, rgba(139,139,139,0) 69%, rgba(0,0,0,0) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(26%, rgba(255,255,255,1)), color-stop(34%, rgba(255,255,255,0.83)), color-stop(36%, rgba(255,255,255,0.79)), color-stop(43%, rgba(255,255,255,0.62)), color-stop(69%, rgba(139,139,139,0)), color-stop(100%, rgba(0,0,0,0)));
+  background: -webkit-linear-gradient(left, rgba(255,255,255,1) 26%, rgba(255,255,255,0.83) 34%, rgba(255,255,255,0.79) 36%, rgba(255,255,255,0.62) 43%, rgba(139,139,139,0) 69%, rgba(0,0,0,0) 100%);
+  background: -o-linear-gradient(left, rgba(255,255,255,1) 26%, rgba(255,255,255,0.83) 34%, rgba(255,255,255,0.79) 36%, rgba(255,255,255,0.62) 43%, rgba(139,139,139,0) 69%, rgba(0,0,0,0) 100%);
+  background: -ms-linear-gradient(left, rgba(255,255,255,1) 26%, rgba(255,255,255,0.83) 34%, rgba(255,255,255,0.79) 36%, rgba(255,255,255,0.62) 43%, rgba(139,139,139,0) 69%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(to right, rgba(255,255,255,1) 26%, rgba(255,255,255,0.83) 34%, rgba(255,255,255,0.79) 36%, rgba(255,255,255,0.62) 43%, rgba(139,139,139,0) 69%, rgba(0,0,0,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000', GradientType=1 );
+  transition: all .6s;
+}
+
+.navbar-light.scrolled{
+  background: rgba(255,255,255,1);
+  -webkit-box-shadow: 0px 0px 22px -5px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 0px 22px -5px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 22px -5px rgba(0,0,0,0.2);
+  transition: all .6s;
+}
+.nav-link{
+  color: $link;
+}
+.nav__item--active{
+  .nav-link{
+    color: darken($link, 15%);
+    font-weight: 700;
+  }
+}
+
+.navbar-toggler{
+  color: $link;
+  border: none;
+}
+a{
+  color: $link;
+}
+.App {
+  text-align: center;
+  position: relative;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #232323;
+}
+
+.App-link {
+  color: $link;
+}
+
+.App-link:hover {
+  color: darken($link, 20%);
+  text-decoration: none;
+}
+section{
+  min-height: 100vh;
+  padding: 100px 0;
+}
+
+#home{
+  section{
+    background-image: url("./img/background2.png");
+    background-position: left bottom;
+    background-size: cover;
+    background-repeat: no-repeat; /* Do not repeat the image */   
+  }
+}
+
+#projekty{
+  section{
+    -webkit-box-shadow: 0px 0px 22px -5px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 0px 22px -5px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 22px -5px rgba(0,0,0,0.2);
+    .col-lg-3{
+      padding: 35px;
+    }
+  }
+}
+
+#o-mnie{
+  section{
+    background-image: url("./img/background3.png");
+    background-position: left bottom;
+    background-size: cover;
+    background-repeat: no-repeat; /* Do not repeat the image */   
+  }
+}
+
+#technologie{
+  section{
+    background-image: url("./img/background4.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat; /* Do not repeat the image */ 
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    -webkit-box-shadow: 0px 0px 22px -5px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 0px 22px -5px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 22px -5px rgba(0,0,0,0.2);
+  }
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1{
+    font-size: 48px;
+  }
+  #home section {
+      background-size: contain;
+      padding-left: 25px;
+      padding-right: 25px;
+  }
+  .navbar-light{
+    background: rgba(255,255,255,1);  
+    -webkit-box-shadow: 0px 0px 22px -5px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 0px 22px -5px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 22px -5px rgba(0,0,0,0.2);
+  }
+  .collapse:not(.show) {
+    transition: all .5s;
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+  .collapse.show{
+    transition: all .5s;
+    display: block;
+    height: 200px;
+    overflow: hidden;
+  }
+}

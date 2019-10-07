@@ -1,0 +1,17 @@
+@import "../../Variables.scss";
+
+.navigation{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	.navigation__list{
+			display: flex;
+			flex-direction: row;
+			list-style-type: none;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			.nav-link{
+				color: $secondary-text;
+			}
+	}
+}
